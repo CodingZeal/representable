@@ -394,7 +394,7 @@ song.to_json(:append => "SOLD OUT!")
 If you want to append the "SOLD OUT!" to the song's `title` when rendering, use the `:getter` option.
 
 ```ruby
-SongRepresenter
+module SongRepresenter
   include Representable::JSON
 
   property :title, :getter => lambda { |args| title + args[:append] }
